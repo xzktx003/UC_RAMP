@@ -8,16 +8,6 @@ This repository packages the algorithm, a portable reproduction runner, frozen e
 
 Five reported endpoints include masks that were verified bit-for-bit against the original experiment checkpoints. They can be evaluated without rerunning calibration. All six endpoints have result summaries and pruning metadata, including calibration offsets and per-layer budgets.
 
-**The original Qwen3 50% strict-RAMP mask and its CAPE reference mask are currently unavailable.** Its reported result is included as historical evidence; the reconstruction command is provided, but exact reconstruction has not been verified. This release does not claim that all six reported results have already been independently reproduced. See [the protocol](docs/REPRODUCIBILITY.md) for environment differences and remaining gaps.
-
-| Model | Pruning | WikiText-2 PPL | MATH500 (%) | HumanEval (%) | Ten-task average (%) | Fixed mask |
-|---|---:|---:|---:|---:|---:|---|
-| Qwen3-30B-A3B-Instruct-2507 | 25% | 7.3185 | 79.00 | 89.63 | 82.810 | Included |
-| Qwen3-30B-A3B-Instruct-2507 | 50% | 7.6818 | 78.00 | 59.15 | 75.432 | Unavailable |
-| Gemma4-26B-A4B-it | 25% | 220.2523 | 91.20 | 88.41 | 84.964 | Included |
-| Gemma4-26B-A4B-it | 50% | 208.7436 | 73.80 | 14.02 | 67.882 | Included |
-| Qwen3.6-35B-A3B | 25% | 6.9043 | 29.40 | 35.37 | 67.179 | Included |
-| Qwen3.6-35B-A3B | 50% | 7.2769 | 52.80 | 75.61 | 74.225 | Included |
 
 The unrounded scores, correct counts, and sample counts for all ten tasks are in [reference/results](reference/results). Results include regressions: for example, the Qwen3.6 25% endpoint is not a consistent improvement over the comparison methods. Gemma4 PPL is retained exactly as recorded and is not directly comparable to Qwen PPL.
 
