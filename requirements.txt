@@ -1,0 +1,13 @@
+# Runtime versions observed for the five newer accuracy runs.
+# Install torch from the cu129 wheel index matching your CUDA system first.
+torch==2.13.0
+transformers==5.16.1
+datasets==3.6.0
+accelerate==1.12.0
+numpy==2.2.6
+safetensors==0.8.0
+pyarrow==21.0.0
+pandas==2.2.3
+sentencepiece==0.2.1
+tokenizers==0.23.1
+PyYAML==6.0.3

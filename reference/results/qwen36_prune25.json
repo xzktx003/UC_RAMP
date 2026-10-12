@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "experiment_type": "review_v1_fair_ablation_evalscope_summary",
+  "model": "local/Qwen3.6-35B-A3B",
+  "method": "UC-RAMP",
+  "profile": "review_stage1_ramp",
+  "calibration_aggregation": "universal_capability_envelope",
+  "max_swaps": 1,
+  "granularity": "channel",
+  "prune_ratio": 0.25,
+  "retained_channels": 3932160,
+  "total_channels": 5242880,
+  "mask_checkpoint_sha256": "738ac1c995dfc8aba5800b0d1e144059a1fd7d0f064156a96d5ad12ef1cb0d13",
+  "protocol": {
+    "evaluator": "EvalScope 1.4.1",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "seed": 1234,
+    "mmlu_used": false,
+    "offline": true,
+    "calibration_windows": 448,
+    "calibration_sequence_length": 2048,
+    "layer_budget_schedule": "tail_protected_normalized_exact75"
+  },
+  "metrics": {
+    "wikitext2_ppl_diagnostic": 6.904255318847483,
+    "piqa": 0.911316648531012,
+    "arc_easy": 0.914983164983165,
+    "arc_challenge": 0.9078498293515358,
+    "gsm8k": 0.7717968157695224,
+    "hellaswag": 0.8220474009161521,
+    "winogrande": 0.856353591160221,
+    "race": 0.8303607620591812,
+    "gpqa_diamond": 0.05555555555555555,
+    "math500": 0.294,
+    "humaneval_pass_at_1": 0.35365853658536583,
+    "accuracy_macro_average": 0.671792230491171,
+    "math500_high_repetition_rate": 0.0,
+    "math500_near_cap_rate": 0.808
+  },
+  "correct_counts": {
+    "piqa": 1675,
+    "arc_easy": 2174,
+    "arc_challenge": 1064,
+    "gsm8k": 1018,
+    "hellaswag": 8255,
+    "winogrande": 1085,
+    "race": 4097,
+    "gpqa_diamond": 11,
+    "math500": 147,
+    "humaneval_pass_at_1": 58
+  },
+  "sample_counts": {
+    "piqa": 1838,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "gsm8k": 1319,
+    "hellaswag": 10042,
+    "winogrande": 1267,
+    "race": 4934,
+    "gpqa_diamond": 198,
+    "math500": 500,
+    "humaneval_pass_at_1": 164
+  },
+  "sources": {
+    "mask_generation": "reference/pruning/qwen36_prune25.json",
+    "ppl_result": "reference/ppl/qwen36_prune25.json"
+  }
+}

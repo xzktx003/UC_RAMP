@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "runs": {
+    "qwen3_prune25": {
+      "architecture": "qwen3",
+      "prune_ratio": 0.25,
+      "model_name": "local/Qwen3-30B-A3B-Instruct-2507",
+      "model_revision": "local-20260828-review-v1-fixed-stage2",
+      "summary": "reference/results/qwen3_prune25.json",
+      "maskgen": "reference/pruning/qwen3_prune25.json",
+      "stage1_maskgen": "reference/pruning/qwen3_prune25_cape.json",
+      "pruning_environment": {
+        "torch": "2.13.0+cu129",
+        "transformers": "5.16.1"
+      },
+      "original_mask_checkpoint_sha256": "6858529f3eac366955fd0b7396130c0d7ad94f1015b6dfdfaa0d2e5e4cdff5cd",
+      "mask_available": true,
+      "mask_artifact": "reference/masks/qwen3_prune25.json",
+      "stage1_mask_artifact": "reference/masks/qwen3_prune25_cape.json",
+      "replay_status": "mask_bits_verified"
+    },
+    "qwen3_prune50": {
+      "architecture": "qwen3",
+      "prune_ratio": 0.5,
+      "model_name": "local/Qwen3-30B-A3B-Instruct-2507",
+      "model_revision": "local-20260828-review-v1-fixed-stage2",
+      "summary": "reference/results/qwen3_prune50.json",
+      "maskgen": "reference/pruning/qwen3_prune50.json",
+      "stage1_maskgen": "reference/pruning/qwen3_prune50_cape.json",
+      "pruning_environment": {
+        "torch": "2.10.0+cu128",
+        "transformers": "5.13.0"
+      },
+      "original_mask_checkpoint_sha256": "43d1b90f822b335622eee4b85767591ac07fc39567253a501562ea36e58b544d",
+      "mask_available": false,
+      "mask_artifact": null,
+      "stage1_mask_artifact": null,
+      "replay_status": "original_mask_missing_rebuild_not_yet_verified"
+    },
+    "gemma4_prune25": {
+      "architecture": "gemma4",
+      "prune_ratio": 0.25,
+      "model_name": "local/gemma-4-26B-A4B-it",
+      "model_revision": "local-20260828-review-v1-fixed-stage2",
+      "summary": "reference/results/gemma4_prune25.json",
+      "maskgen": "reference/pruning/gemma4_prune25.json",
+      "stage1_maskgen": "reference/pruning/gemma4_prune25_cape.json",
+      "pruning_environment": {
+        "torch": "2.13.0+cu129",
+        "transformers": "5.16.1"
+      },
+      "original_mask_checkpoint_sha256": "db4d3bcfcea5669fa5b0b95385f8b0cd06b2e62c88526f31ae2372bfa444b9fa",
+      "mask_available": true,
+      "mask_artifact": "reference/masks/gemma4_prune25.json",
+      "stage1_mask_artifact": "reference/masks/gemma4_prune25_cape.json",
+      "replay_status": "mask_bits_verified"
+    },
+    "gemma4_prune50": {
+      "architecture": "gemma4",
+      "prune_ratio": 0.5,
+      "model_name": "local/gemma-4-26B-A4B-it",
+      "model_revision": "local-20260828-review-v1-fixed-stage2",
+      "summary": "reference/results/gemma4_prune50.json",
+      "maskgen": "reference/pruning/gemma4_prune50.json",
+      "stage1_maskgen": "reference/pruning/gemma4_prune50_cape.json",
+      "pruning_environment": {
+        "torch": "2.13.0+cu129",
+        "transformers": "5.16.1"
+      },
+      "original_mask_checkpoint_sha256": "8dfc43e8e9cd05289f06952069a8cdf86c99264d19c22b1d11449cc22d415253",
+      "mask_available": true,
+      "mask_artifact": "reference/masks/gemma4_prune50.json",
+      "stage1_mask_artifact": "reference/masks/gemma4_prune50_cape.json",
+      "replay_status": "mask_bits_verified"
+    },
+    "qwen36_prune25": {
+      "architecture": "qwen36",
+      "prune_ratio": 0.25,
+      "model_name": "local/Qwen3.6-35B-A3B",
+      "model_revision": "local-20260828-review-v1-fixed-stage2",
+      "summary": "reference/results/qwen36_prune25.json",
+      "maskgen": "reference/pruning/qwen36_prune25.json",
+      "stage1_maskgen": "reference/pruning/qwen36_prune25_cape.json",
+      "pruning_environment": {
+        "torch": "2.13.0+cu129",
+        "transformers": "5.16.1"
+      },
+      "original_mask_checkpoint_sha256": "738ac1c995dfc8aba5800b0d1e144059a1fd7d0f064156a96d5ad12ef1cb0d13",
+      "mask_available": true,
+      "mask_artifact": "reference/masks/qwen36_prune25.json",
+      "stage1_mask_artifact": "reference/masks/qwen36_prune25_cape.json",
+      "replay_status": "mask_bits_verified"
+    },
+    "qwen36_prune50": {
+      "architecture": "qwen36",
+      "prune_ratio": 0.5,
+      "model_name": "local/Qwen3.6-35B-A3B",
+      "model_revision": "local-20260828-review-v1-fixed-stage2",
+      "summary": "reference/results/qwen36_prune50.json",
+      "maskgen": "reference/pruning/qwen36_prune50.json",
+      "stage1_maskgen": "reference/pruning/qwen36_prune50_cape.json",
+      "pruning_environment": {
+        "torch": "2.13.0+cu129",
+        "transformers": "5.16.1"
+      },
+      "original_mask_checkpoint_sha256": "f97f404d1dbc4112f7c74546030fd795c1aaba803ff76df22e5d3fdac2cc7e08",
+      "mask_available": true,
+      "mask_artifact": "reference/masks/qwen36_prune50.json",
+      "stage1_mask_artifact": "reference/masks/qwen36_prune50_cape.json",
+      "replay_status": "mask_bits_verified"
+    }
+  }
+}

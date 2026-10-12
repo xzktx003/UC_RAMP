@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "experiment_type": "review_v1_fair_ablation_evalscope_summary",
+  "model": "local/gemma-4-26B-A4B-it",
+  "method": "UC-RAMP",
+  "profile": "review_stage1_ramp",
+  "calibration_aggregation": "universal_capability_envelope",
+  "max_swaps": 1,
+  "granularity": "channel",
+  "prune_ratio": 0.25,
+  "retained_channels": 2027520,
+  "total_channels": 2703360,
+  "mask_checkpoint_sha256": "db4d3bcfcea5669fa5b0b95385f8b0cd06b2e62c88526f31ae2372bfa444b9fa",
+  "protocol": {
+    "evaluator": "EvalScope 1.4.1",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "seed": 1234,
+    "mmlu_used": false,
+    "offline": true,
+    "calibration_windows": 448,
+    "calibration_sequence_length": 2048,
+    "layer_budget_schedule": "tail_protected_normalized_exact75"
+  },
+  "metrics": {
+    "wikitext2_ppl_diagnostic": 220.2523429183954,
+    "piqa": 0.8492927094668118,
+    "arc_easy": 0.9431818181818182,
+    "arc_challenge": 0.9445392491467577,
+    "gsm8k": 0.9658832448824868,
+    "hellaswag": 0.7417845050786696,
+    "winogrande": 0.7758484609313339,
+    "race": 0.9140656668017836,
+    "gpqa_diamond": 0.5656565656565656,
+    "math500": 0.912,
+    "humaneval_pass_at_1": 0.8841463414634146,
+    "accuracy_macro_average": 0.8496398561609642,
+    "math500_high_repetition_rate": 0.01,
+    "math500_near_cap_rate": 0.068
+  },
+  "correct_counts": {
+    "piqa": 1561,
+    "arc_easy": 2241,
+    "arc_challenge": 1107,
+    "gsm8k": 1274,
+    "hellaswag": 7449,
+    "winogrande": 983,
+    "race": 4510,
+    "gpqa_diamond": 112,
+    "math500": 456,
+    "humaneval_pass_at_1": 145
+  },
+  "sample_counts": {
+    "piqa": 1838,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "gsm8k": 1319,
+    "hellaswag": 10042,
+    "winogrande": 1267,
+    "race": 4934,
+    "gpqa_diamond": 198,
+    "math500": 500,
+    "humaneval_pass_at_1": 164
+  },
+  "sources": {
+    "mask_generation": "reference/pruning/gemma4_prune25.json",
+    "ppl_result": "reference/ppl/gemma4_prune25.json"
+  }
+}

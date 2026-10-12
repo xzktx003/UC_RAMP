@@ -1,0 +1,167 @@
+{
+  "dataset_args": {
+    "gpqa_diamond": {
+      "aggregation": "mean",
+      "dataset_id": "AI-ModelScope/gpqa_diamond",
+      "default_subset": "default",
+      "description": "GPQA is a dataset for evaluating the reasoning ability of large language models (LLMs) on complex mathematical problems. It contains questions that require step-by-step reasoning to arrive at the correct answer.",
+      "eval_split": "train",
+      "extra_params": {},
+      "few_shot_num": 0,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        "acc"
+      ],
+      "name": "gpqa_diamond",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "GPQA-Diamond",
+      "prompt_template": "Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: [LETTER]' (without quotes) where [LETTER] is one of {letters}. Think step by step before answering.\n\n{question}\n\n{choices}",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "default"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Knowledge",
+        "MCQ"
+      ],
+      "train_split": null
+    },
+    "hellaswag": {
+      "aggregation": "mean",
+      "dataset_id": "evalscope/hellaswag",
+      "default_subset": "default",
+      "description": "HellaSwag is a benchmark for commonsense reasoning in natural language understanding tasks. It consists of multiple-choice questions where the model must select the most plausible continuation of a given context.",
+      "eval_split": "validation",
+      "extra_params": {},
+      "few_shot_num": 0,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        "acc"
+      ],
+      "name": "hellaswag",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "HellaSwag",
+      "prompt_template": "Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: [LETTER]' (without quotes) where [LETTER] is one of {letters}.\n\n{question}\n\n{choices}",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "default"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Commonsense",
+        "MCQ",
+        "Knowledge"
+      ],
+      "train_split": null
+    },
+    "race": {
+      "aggregation": "mean",
+      "dataset_id": "evalscope/race",
+      "default_subset": "default",
+      "description": "RACE is a benchmark for testing reading comprehension and reasoning abilities of neural models. It is constructed from Chinese middle and high school examinations.",
+      "eval_split": "test",
+      "extra_params": {},
+      "few_shot_num": 3,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        "acc"
+      ],
+      "name": "race",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "RACE",
+      "prompt_template": "Answer the following multiple choice question. The last line of your response should be of the following format: 'ANSWER: [LETTER]' (without quotes) where [LETTER] is one of {letters}. Think step by step before answering.\n\n{question}\n\n{choices}",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "high",
+        "middle"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Reasoning",
+        "MCQ"
+      ],
+      "train_split": "train"
+    },
+    "winogrande": {
+      "aggregation": "mean",
+      "dataset_id": "AI-ModelScope/winogrande_val",
+      "default_subset": "default",
+      "description": "Winogrande is a benchmark for evaluating AI models on commonsense reasoning tasks, specifically designed to test the ability to resolve ambiguous pronouns in sentences.",
+      "eval_split": "validation",
+      "extra_params": {},
+      "few_shot_num": 0,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        "acc"
+      ],
+      "name": "winogrande",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "Winogrande",
+      "prompt_template": "Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: [LETTER]' (without quotes) where [LETTER] is one of {letters}.\n\n{question}\n\n{choices}",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "default"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Reasoning",
+        "MCQ"
+      ],
+      "train_split": null
+    }
+  },
+  "datasets": [
+    "hellaswag",
+    "winogrande",
+    "race",
+    "gpqa_diamond"
+  ],
+  "dataset_hub": "modelscope",
+  "generation_config": {
+    "batch_size": 32,
+    "max_tokens": 2048,
+    "temperature": 0.0
+  },
+  "eval_batch_size": 32,
+  "seed": 1234,
+  "chat_template": null,
+  "eval_type": "openai_api",
+  "limit": null
+}

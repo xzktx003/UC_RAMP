@@ -1,0 +1,77 @@
+{
+  "schema_version": 1,
+  "scope": "current local assets; not a historical weight attestation",
+  "files": {
+    "config.json": {
+      "bytes": 963,
+      "sha256": "a1ee086a68d0cbfc87316da00ba4b8507bd1292978108e2496201a30a450f438"
+    },
+    "generation_config.json": {
+      "bytes": 239,
+      "sha256": "19d306dd769db12a9d710b44cf7f83b635efbe5166b84fb4358a08fb7d88bb53"
+    },
+    "tokenizer.json": {
+      "bytes": 11422654,
+      "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4"
+    },
+    "tokenizer_config.json": {
+      "bytes": 9377,
+      "sha256": "a62ff0a2472a0fa1b8eaabcb57c59b58afa42a22831dc141400b6e0cf2b65ce3"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 1699758,
+      "sha256": "8dde190b862c7c80ec7403c6495de00c60bbaf246ed479cee4506284989c584c"
+    }
+  },
+  "weight_shards": {
+    "model-00001-of-00016.safetensors": {
+      "bytes": 3998893112
+    },
+    "model-00002-of-00016.safetensors": {
+      "bytes": 3999974192
+    },
+    "model-00003-of-00016.safetensors": {
+      "bytes": 3997360832
+    },
+    "model-00004-of-00016.safetensors": {
+      "bytes": 3999975056
+    },
+    "model-00005-of-00016.safetensors": {
+      "bytes": 3999975400
+    },
+    "model-00006-of-00016.safetensors": {
+      "bytes": 3999975400
+    },
+    "model-00007-of-00016.safetensors": {
+      "bytes": 3999975472
+    },
+    "model-00008-of-00016.safetensors": {
+      "bytes": 3997362064
+    },
+    "model-00009-of-00016.safetensors": {
+      "bytes": 3999975408
+    },
+    "model-00010-of-00016.safetensors": {
+      "bytes": 3999975400
+    },
+    "model-00011-of-00016.safetensors": {
+      "bytes": 3999975408
+    },
+    "model-00012-of-00016.safetensors": {
+      "bytes": 3987924896
+    },
+    "model-00013-of-00016.safetensors": {
+      "bytes": 3999975088
+    },
+    "model-00014-of-00016.safetensors": {
+      "bytes": 3999975400
+    },
+    "model-00015-of-00016.safetensors": {
+      "bytes": 3999975400
+    },
+    "model-00016-of-00016.safetensors": {
+      "bytes": 1085307128
+    }
+  },
+  "weight_hashes_included": false
+}

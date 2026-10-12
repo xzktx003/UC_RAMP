@@ -1,0 +1,62 @@
+{
+  "dataset_args": {
+    "math_500": {
+      "aggregation": "mean",
+      "dataset_id": "AI-ModelScope/MATH-500",
+      "default_subset": "default",
+      "description": "MATH-500 is a benchmark for evaluating mathematical reasoning capabilities of AI models. It consists of 500 diverse math problems across five levels of difficulty, designed to test a model's ability to solve complex mathematical problems by generating step-by-step solutions and providing the correct final answer.",
+      "eval_split": "test",
+      "extra_params": {},
+      "few_shot_num": 0,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        {
+          "acc": {
+            "numeric": true
+          }
+        }
+      ],
+      "name": "math_500",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "MATH-500",
+      "prompt_template": "{question}\nPlease reason step by step, and put your final answer within \\boxed{{}}.",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "Level 1",
+        "Level 2",
+        "Level 3",
+        "Level 4",
+        "Level 5"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Math",
+        "Reasoning"
+      ],
+      "train_split": null
+    }
+  },
+  "datasets": [
+    "math_500"
+  ],
+  "dataset_hub": "modelscope",
+  "generation_config": {
+    "batch_size": 8,
+    "max_tokens": 2048,
+    "temperature": 0.0
+  },
+  "eval_batch_size": 8,
+  "seed": 1234,
+  "chat_template": null,
+  "eval_type": "openai_api",
+  "limit": null
+}

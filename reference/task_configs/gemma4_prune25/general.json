@@ -1,0 +1,134 @@
+{
+  "dataset_args": {
+    "arc": {
+      "aggregation": "mean",
+      "dataset_id": "allenai/ai2_arc",
+      "default_subset": "default",
+      "description": "The ARC (AI2 Reasoning Challenge) benchmark is designed to evaluate the reasoning capabilities of AI models through multiple-choice questions derived from science exams. It includes two subsets: ARC-Easy and ARC-Challenge, which vary in difficulty.",
+      "eval_split": "test",
+      "extra_params": {},
+      "few_shot_num": 0,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        "acc"
+      ],
+      "name": "arc",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "ARC",
+      "prompt_template": "Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: [LETTER]' (without quotes) where [LETTER] is one of {letters}.\n\n{question}\n\n{choices}",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "ARC-Easy",
+        "ARC-Challenge"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Reasoning",
+        "MCQ"
+      ],
+      "train_split": "train"
+    },
+    "gsm8k": {
+      "aggregation": "mean",
+      "dataset_id": "AI-ModelScope/gsm8k",
+      "default_subset": "default",
+      "description": "GSM8K (Grade School Math 8K) is a dataset of grade school math problems, designed to evaluate the mathematical reasoning abilities of AI models.",
+      "eval_split": "test",
+      "extra_params": {},
+      "few_shot_num": 4,
+      "few_shot_prompt_template": "Here are some examples of how to solve similar problems:\n\n{fewshot}\n\n{question}\nPlease reason step by step, and put your final answer within \\boxed{{}}.",
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        {
+          "acc": {
+            "numeric": true
+          }
+        }
+      ],
+      "name": "gsm8k",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "GSM8K",
+      "prompt_template": "{question}\nPlease reason step by step, and put your final answer within \\boxed{{}}.",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "main"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Math",
+        "Reasoning"
+      ],
+      "train_split": "train"
+    },
+    "piqa": {
+      "aggregation": "mean",
+      "dataset_id": "extraordinarylab/piqa",
+      "default_subset": "default",
+      "description": "PIQA addresses the challenging task of reasoning about physical commonsense in natural language.",
+      "eval_split": "validation",
+      "extra_params": {},
+      "few_shot_num": 0,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        "acc"
+      ],
+      "name": "piqa",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "PIQA",
+      "prompt_template": "Answer the following multiple choice question. The entire content of your response should be of the following format: 'ANSWER: [LETTER]' (without quotes) where [LETTER] is one of {letters}.\n\n{question}\n\n{choices}",
+      "query_template": null,
+      "review_timeout": null,
+      "sandbox_config": {},
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "default"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Reasoning",
+        "Commonsense",
+        "MCQ"
+      ],
+      "train_split": "train"
+    }
+  },
+  "datasets": [
+    "piqa",
+    "arc",
+    "gsm8k"
+  ],
+  "dataset_hub": "modelscope",
+  "generation_config": {
+    "batch_size": 8,
+    "max_tokens": 2048,
+    "temperature": 0.0
+  },
+  "eval_batch_size": 8,
+  "seed": 1234,
+  "chat_template": null,
+  "eval_type": "openai_api",
+  "limit": null
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "experiment_type": "review_v1_fair_ablation_evalscope_summary",
+  "model": "qwen3_exact50",
+  "method": "cape_fixed_stage2_beta020",
+  "profile": "review_stage1_ramp",
+  "calibration_aggregation": "universal_capability_envelope",
+  "max_swaps": 1,
+  "granularity": "channel",
+  "prune_ratio": 0.5,
+  "retained_channels": 2359296,
+  "total_channels": 4718592,
+  "mask_checkpoint_sha256": "43d1b90f822b335622eee4b85767591ac07fc39567253a501562ea36e58b544d",
+  "protocol": {
+    "evaluator": "EvalScope 1.4.1",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "seed": 1234,
+    "mmlu_used": false,
+    "offline": true,
+    "calibration_windows": 448,
+    "calibration_sequence_length": 2048,
+    "layer_budget_schedule": "tail_protected_normalized_exact50"
+  },
+  "metrics": {
+    "wikitext2_ppl_diagnostic": 7.681767857097502,
+    "piqa": 0.824265505984766,
+    "arc_easy": 0.9208754208754208,
+    "arc_challenge": 0.8882252559726962,
+    "gsm8k": 0.9552691432903715,
+    "hellaswag": 0.8169687313284206,
+    "winogrande": 0.6850828729281768,
+    "race": 0.8891366031617349,
+    "gpqa_diamond": 0.1919191919191919,
+    "math500": 0.78,
+    "humaneval_pass_at_1": 0.5914634146341463,
+    "accuracy_macro_average": 0.7543206140094927,
+    "math500_high_repetition_rate": 0.038,
+    "math500_near_cap_rate": 0.212
+  },
+  "correct_counts": {
+    "piqa": 1515,
+    "arc_easy": 2188,
+    "arc_challenge": 1041,
+    "gsm8k": 1260,
+    "hellaswag": 8204,
+    "winogrande": 868,
+    "race": 4387,
+    "gpqa_diamond": 38,
+    "math500": 390,
+    "humaneval_pass_at_1": 97
+  },
+  "sample_counts": {
+    "piqa": 1838,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "gsm8k": 1319,
+    "hellaswag": 10042,
+    "winogrande": 1267,
+    "race": 4934,
+    "gpqa_diamond": 198,
+    "math500": 500,
+    "humaneval_pass_at_1": 164
+  },
+  "sources": {
+    "mask_generation": "reference/pruning/qwen3_prune50.json",
+    "ppl_result": "reference/ppl/qwen3_prune50.json"
+  }
+}

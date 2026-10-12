@@ -1,0 +1,2439 @@
+{
+  "schema_version": 1,
+  "experiment_type": "review_v1_fair_ablation_mask_generation",
+  "status": "complete",
+  "smoke": false,
+  "model": "local/Qwen3-30B-A3B-Instruct-2507",
+  "model_revision": "local-20260826-review-v1",
+  "model_source": "<local>/Qwen3-30B-A3B-Instruct-2507",
+  "profile": "review_stage1_envelope",
+  "method": "ramp_camera",
+  "allocation": "global",
+  "prune_ratio": 0.5,
+  "camera_alpha": 0.9,
+  "interaction_strength": 0.2,
+  "max_swaps": 0,
+  "output_metric": "next_rmsnorm_gamma",
+  "calibration_corpus": "reasoning_hardmath_code_append",
+  "calibration_aggregation": "universal_capability_envelope",
+  "layer_budget_schedule": "tail_protected_normalized_exact50",
+  "layer_budgets": [
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    43008,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440,
+    61440
+  ],
+  "rate_distortion_allocation": null,
+  "rate_distortion_capacity_signal": null,
+  "rate_distortion_budget_scope": null,
+  "rate_distortion_score_mode": null,
+  "rate_distortion_max_width_delta": null,
+  "tokens_per_expert": 512,
+  "seed": 1234,
+  "nsamples": 448,
+  "sequence_length": 2048,
+  "layers_completed": 48,
+  "model_layer_count": 48,
+  "retained_channels": 2359296,
+  "available_channels": 4718592,
+  "calibration": {
+    "dataset": "reasoning_hardmath_code_append",
+    "sample_allocation": {
+      "wikitext": 128,
+      "gsm8k": 64,
+      "math_qa": 64,
+      "competition_math": 128,
+      "mbpp": 64
+    },
+    "components": [
+      {
+        "name": "wikitext",
+        "dataset_config": "wikitext-2-raw-v1",
+        "dataset_split": "train",
+        "dataset_fingerprint": "7c4dea6941cc4a0a",
+        "sample_count": 128,
+        "encoded_tokens": 2518423,
+        "offsets": [
+          1848566,
+          490106,
+          31421,
+          380186,
+          2442039,
+          146490,
+          352062,
+          412811,
+          1487449,
+          993252,
+          73098,
+          129243,
+          66439,
+          1451602,
+          2031074,
+          1944261,
+          623083,
+          382886,
+          767937,
+          479882,
+          61315,
+          2110085,
+          2041583,
+          1047854,
+          270793,
+          2269488,
+          1954120,
+          287600,
+          372994,
+          2160255,
+          2428513,
+          192792,
+          1130723,
+          2333847,
+          264566,
+          1268479,
+          2017612,
+          1489980,
+          1117590,
+          1045019,
+          838995,
+          1901647,
+          2223657,
+          80948,
+          2131133,
+          296068,
+          24244,
+          1398842,
+          603008,
+          1983179,
+          1582709,
+          700920,
+          227227,
+          319748,
+          2464273,
+          2082814,
+          687879,
+          315922,
+          2337612,
+          902171,
+          605010,
+          113785,
+          1452197,
+          465101,
+          2221652,
+          592352,
+          1280909,
+          1904808,
+          166050,
+          1745882,
+          1160914,
+          168630,
+          743830,
+          1139471,
+          648315,
+          1259435,
+          648235,
+          1948262,
+          172229,
+          2361838,
+          1619771,
+          1466296,
+          2079773,
+          1433226,
+          2444695,
+          1963434,
+          1996215,
+          190124,
+          1974846,
+          2495259,
+          712911,
+          1843800,
+          2177735,
+          1836568,
+          1240167,
+          1153605,
+          519576,
+          778554,
+          1746192,
+          1828967,
+          501082,
+          2222138,
+          432403,
+          2035081,
+          1580496,
+          1071536,
+          802844,
+          1448498,
+          453646,
+          659217,
+          2434433,
+          1129653,
+          649473,
+          1356813,
+          1873472,
+          296847,
+          329219,
+          1657769,
+          898210,
+          200216,
+          1200130,
+          159360,
+          920195,
+          2125316,
+          367705,
+          1329535,
+          1281882,
+          1932878
+        ],
+        "statistics_tokens": 262144
+      },
+      {
+        "name": "gsm8k",
+        "dataset_split": "train",
+        "dataset_fingerprint": "097157d8187d2b97",
+        "sample_count": 64,
+        "encoded_tokens": 1542734,
+        "offsets": [
+          138889,
+          1226791,
+          539867,
+          153091,
+          1444587,
+          894024,
+          423408,
+          212426,
+          831828,
+          408110,
+          1478198,
+          963789,
+          1049661,
+          495614,
+          757605,
+          430084,
+          1080104,
+          1473072,
+          883265,
+          366351,
+          1225810,
+          426266,
+          632872,
+          126480,
+          739216,
+          1120593,
+          320991,
+          1047710,
+          1151400,
+          990770,
+          699941,
+          290935,
+          274586,
+          100815,
+          1309683,
+          346197,
+          303937,
+          1145180,
+          146275,
+          1496944,
+          682172,
+          358662,
+          3578,
+          1401400,
+          1414942,
+          127558,
+          1338570,
+          183753,
+          310952,
+          455152,
+          83700,
+          907589,
+          820911,
+          680339,
+          434360,
+          1414969,
+          799436,
+          587302,
+          1127193,
+          1325075,
+          638654,
+          885075,
+          668893,
+          1437115
+        ],
+        "statistics_tokens": 131072
+      },
+      {
+        "name": "math_qa",
+        "dataset_split": "train",
+        "dataset_fingerprint": "7211603f1601a16d",
+        "sample_count": 64,
+        "encoded_tokens": 5930707,
+        "offsets": [
+          4846512,
+          1270176,
+          4468105,
+          779040,
+          2183686,
+          2332203,
+          3441493,
+          3356004,
+          4739084,
+          2321484,
+          4410734,
+          954111,
+          5885938,
+          3148651,
+          2300374,
+          1794204,
+          2495157,
+          4928387,
+          3341505,
+          440393,
+          2932035,
+          3695643,
+          1950326,
+          4114623,
+          1386810,
+          3192214,
+          2582996,
+          20538,
+          615105,
+          4028267,
+          3313422,
+          2503337,
+          3597960,
+          5727710,
+          4023074,
+          1556750,
+          3359737,
+          5271481,
+          4009435,
+          1318609,
+          2359383,
+          4961884,
+          3099804,
+          5496439,
+          5037306,
+          2906500,
+          1728623,
+          1417520,
+          4352549,
+          4764933,
+          3837095,
+          5606194,
+          3979782,
+          5535165,
+          237350,
+          3924964,
+          5542412,
+          869989,
+          225750,
+          3075546,
+          3991427,
+          546876,
+          1174553,
+          4932648
+        ],
+        "statistics_tokens": 131072
+      },
+      {
+        "name": "competition_math",
+        "category": "Algebra",
+        "level": "Level 4",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 10,
+        "encoded_tokens": 91067,
+        "offsets": [
+          43486,
+          45729,
+          37965,
+          39140,
+          76423,
+          43330,
+          73774,
+          38506,
+          73731,
+          25502
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 20480
+      },
+      {
+        "name": "competition_math",
+        "category": "Counting & Probability",
+        "level": "Level 4",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 44192,
+        "offsets": [
+          33368,
+          18286,
+          4750,
+          34998,
+          39466,
+          13369,
+          22258,
+          33441,
+          21904
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Geometry",
+        "level": "Level 4",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 73933,
+        "offsets": [
+          42082,
+          60034,
+          35062,
+          11135,
+          69110,
+          71859,
+          15678,
+          32145,
+          33705
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Intermediate Algebra",
+        "level": "Level 4",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 145338,
+        "offsets": [
+          97484,
+          35935,
+          7439,
+          103426,
+          9792,
+          11553,
+          54711,
+          40582,
+          82053
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Number Theory",
+        "level": "Level 4",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 45751,
+        "offsets": [
+          33793,
+          23293,
+          28479,
+          33769,
+          4521,
+          19999,
+          17132,
+          31822,
+          37998
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Prealgebra",
+        "level": "Level 4",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 55596,
+        "offsets": [
+          14391,
+          22789,
+          33054,
+          5431,
+          42804,
+          53146,
+          1189,
+          44744,
+          38341
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Precalculus",
+        "level": "Level 4",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 96441,
+        "offsets": [
+          43396,
+          73948,
+          30094,
+          21303,
+          62649,
+          65459,
+          89777,
+          88574,
+          18342
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Algebra",
+        "level": "Level 5",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 10,
+        "encoded_tokens": 145553,
+        "offsets": [
+          139542,
+          17887,
+          38150,
+          139302,
+          63775,
+          43057,
+          132758,
+          132383,
+          103062,
+          85590
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 20480
+      },
+      {
+        "name": "competition_math",
+        "category": "Counting & Probability",
+        "level": "Level 5",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 115158,
+        "offsets": [
+          16898,
+          92828,
+          73626,
+          74209,
+          70134,
+          79976,
+          78538,
+          110656,
+          58502
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Geometry",
+        "level": "Level 5",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 267452,
+        "offsets": [
+          21436,
+          194879,
+          36012,
+          193517,
+          214116,
+          23397,
+          37173,
+          164709,
+          119497
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Intermediate Algebra",
+        "level": "Level 5",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 237811,
+        "offsets": [
+          163382,
+          210506,
+          51954,
+          90750,
+          136645,
+          180630,
+          201619,
+          99558,
+          154608
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Number Theory",
+        "level": "Level 5",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 118009,
+        "offsets": [
+          64590,
+          6874,
+          3911,
+          58730,
+          105642,
+          10509,
+          108573,
+          38425,
+          55888
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Prealgebra",
+        "level": "Level 5",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 77911,
+        "offsets": [
+          44604,
+          19384,
+          63720,
+          31723,
+          3906,
+          46741,
+          48681,
+          54395,
+          22813
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "competition_math",
+        "category": "Precalculus",
+        "level": "Level 5",
+        "dataset_split": "train",
+        "dataset_fingerprint": "721bcef2ef10224e",
+        "source": "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+        "exclusion_manifest": "<local>/competition_math_train_decontamination.json",
+        "excluded_problem_count": 21,
+        "sample_count": 9,
+        "encoded_tokens": 130733,
+        "offsets": [
+          9786,
+          83810,
+          2334,
+          27822,
+          101624,
+          25749,
+          109433,
+          79318,
+          81319
+        ],
+        "statistics_region": "all",
+        "statistics_tokens": 18432
+      },
+      {
+        "name": "mbpp",
+        "dataset_config": "full",
+        "dataset_split": "train",
+        "dataset_fingerprint": "5cdc16311fd8e220",
+        "sample_count": 64,
+        "encoded_tokens": 69678,
+        "offsets": [
+          18540,
+          65779,
+          17367,
+          33387,
+          6489,
+          61347,
+          47389,
+          48731,
+          37802,
+          51990,
+          53503,
+          48217,
+          30693,
+          37390,
+          1146,
+          40992,
+          34865,
+          15790,
+          4640,
+          28647,
+          48418,
+          24104,
+          42236,
+          38394,
+          47560,
+          35769,
+          23109,
+          59882,
+          22177,
+          423,
+          53557,
+          31329,
+          25129,
+          58161,
+          35835,
+          22838,
+          46381,
+          53662,
+          63722,
+          63059,
+          62940,
+          67414,
+          58363,
+          48893,
+          13445,
+          52629,
+          16651,
+          13906,
+          61519,
+          63976,
+          12682,
+          17280,
+          33541,
+          31322,
+          9288,
+          43949,
+          51404,
+          38481,
+          46527,
+          53147,
+          24686,
+          61987,
+          61038,
+          41883
+        ],
+        "statistics_tokens": 131072
+      }
+    ],
+    "seed": 1234,
+    "nsamples": 448,
+    "sequence_length": 2048,
+    "statistics_token_count": 917504,
+    "statistics_token_fraction": 1.0,
+    "assistant_end_marker_token_ids": [
+      151645
+    ],
+    "assistant_marker_token_ids": [
+      151644,
+      77091,
+      198
+    ]
+  },
+  "layers": [
+    {
+      "layer": 0,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 1,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 28,
+          "max_expert_routed_tokens": 76586
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 32,
+          "max_expert_routed_tokens": 52722
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 13,
+          "max_expert_routed_tokens": 76714
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 23296
+        }
+      },
+      "elapsed_seconds": 24.577980645000935
+    },
+    {
+      "layer": 1,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 37,
+          "max_expert_routed_tokens": 127446
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 89,
+          "max_expert_routed_tokens": 73095
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 65,
+          "max_expert_routed_tokens": 95282
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 48,
+          "max_expert_routed_tokens": 41706
+        }
+      },
+      "elapsed_seconds": 23.042637168895453
+    },
+    {
+      "layer": 2,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 82432
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 98021
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 94151
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 73176
+        }
+      },
+      "elapsed_seconds": 21.471521500963718
+    },
+    {
+      "layer": 3,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 78575
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 115733
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 112472
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 94444
+        }
+      },
+      "elapsed_seconds": 22.137610123027116
+    },
+    {
+      "layer": 4,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 79077
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 173217
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 134114
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 70614
+        }
+      },
+      "elapsed_seconds": 21.133808644954115
+    },
+    {
+      "layer": 5,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 77947
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 3,
+          "max_expert_routed_tokens": 168503
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 158783
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 95163
+        }
+      },
+      "elapsed_seconds": 21.36232447391376
+    },
+    {
+      "layer": 6,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 111128
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 178946
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 125758
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 122723
+        }
+      },
+      "elapsed_seconds": 18.923375316895545
+    },
+    {
+      "layer": 7,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 143588
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 202980
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 159813
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 97386
+        }
+      },
+      "elapsed_seconds": 19.11920105991885
+    },
+    {
+      "layer": 8,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 120985
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 142012
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 5,
+          "max_expert_routed_tokens": 130513
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 2,
+          "max_expert_routed_tokens": 82213
+        }
+      },
+      "elapsed_seconds": 20.578204908873886
+    },
+    {
+      "layer": 9,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 119152
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 111465
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 131899
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 117415
+        }
+      },
+      "elapsed_seconds": 20.315207564737648
+    },
+    {
+      "layer": 10,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 145162
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 132950
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 103100
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 53863
+        }
+      },
+      "elapsed_seconds": 21.225583737250417
+    },
+    {
+      "layer": 11,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 111580
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 109152
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 117613
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 44077
+        }
+      },
+      "elapsed_seconds": 21.25207836087793
+    },
+    {
+      "layer": 12,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 164853
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 5,
+          "max_expert_routed_tokens": 119538
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 127097
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 65508
+        }
+      },
+      "elapsed_seconds": 21.531431427691132
+    },
+    {
+      "layer": 13,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 137606
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 141997
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 128803
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 50575
+        }
+      },
+      "elapsed_seconds": 20.684322697110474
+    },
+    {
+      "layer": 14,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 150888
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 229804
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 172835
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 51800
+        }
+      },
+      "elapsed_seconds": 20.10964859230444
+    },
+    {
+      "layer": 15,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 151206
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 170914
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 120230
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 76283
+        }
+      },
+      "elapsed_seconds": 20.33090779185295
+    },
+    {
+      "layer": 16,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 150857
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 187442
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 126267
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 128156
+        }
+      },
+      "elapsed_seconds": 20.17764311283827
+    },
+    {
+      "layer": 17,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 95917
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 11,
+          "max_expert_routed_tokens": 129711
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 92024
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 109247
+        }
+      },
+      "elapsed_seconds": 20.240450321231037
+    },
+    {
+      "layer": 18,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 108734
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 169181
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 126326
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 120751
+        }
+      },
+      "elapsed_seconds": 18.805850494187325
+    },
+    {
+      "layer": 19,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 142431
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 176291
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 135142
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 82147
+        }
+      },
+      "elapsed_seconds": 18.636635904200375
+    },
+    {
+      "layer": 20,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 144401
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 141455
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 144748
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 72476
+        }
+      },
+      "elapsed_seconds": 19.484544808976352
+    },
+    {
+      "layer": 21,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 125077
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 103845
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 139436
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 101209
+        }
+      },
+      "elapsed_seconds": 19.82595644099638
+    },
+    {
+      "layer": 22,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 159141
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 135524
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 40,
+          "max_expert_routed_tokens": 99349
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 90527
+        }
+      },
+      "elapsed_seconds": 21.068578079808503
+    },
+    {
+      "layer": 23,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 121977
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 98666
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 17,
+          "max_expert_routed_tokens": 123023
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 45641
+        }
+      },
+      "elapsed_seconds": 20.92705716425553
+    },
+    {
+      "layer": 24,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 173103
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 135124
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 136271
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 79970
+        }
+      },
+      "elapsed_seconds": 20.857761532068253
+    },
+    {
+      "layer": 25,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 153505
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 150380
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 134623
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 50365
+        }
+      },
+      "elapsed_seconds": 21.439637121278793
+    },
+    {
+      "layer": 26,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 147046
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 214344
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 161104
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 50803
+        }
+      },
+      "elapsed_seconds": 20.570023776963353
+    },
+    {
+      "layer": 27,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 146802
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 162461
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 118416
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 52473
+        }
+      },
+      "elapsed_seconds": 19.75335710728541
+    },
+    {
+      "layer": 28,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 148036
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 184208
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 118098
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 2,
+          "max_expert_routed_tokens": 125568
+        }
+      },
+      "elapsed_seconds": 20.355550673790276
+    },
+    {
+      "layer": 29,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 94696
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 119583
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 97572
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 95067
+        }
+      },
+      "elapsed_seconds": 20.27336831111461
+    },
+    {
+      "layer": 30,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 96808
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 160768
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 116326
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 110782
+        }
+      },
+      "elapsed_seconds": 18.81587144220248
+    },
+    {
+      "layer": 31,
+      "retained_channels": 43008,
+      "available_channels": 98304,
+      "retained_ratio": 0.4375,
+      "prune_ratio": 0.5625,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 336.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 120114
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 156580
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 143548
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 72657
+        }
+      },
+      "elapsed_seconds": 19.187697893939912
+    },
+    {
+      "layer": 32,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 116790
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 138990
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 130497
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 69837
+        }
+      },
+      "elapsed_seconds": 20.162068651989102
+    },
+    {
+      "layer": 33,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 118169
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 101736
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 136535
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 98798
+        }
+      },
+      "elapsed_seconds": 19.906321052927524
+    },
+    {
+      "layer": 34,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 136854
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 130283
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 14,
+          "max_expert_routed_tokens": 93718
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 74514
+        }
+      },
+      "elapsed_seconds": 21.120279918890446
+    },
+    {
+      "layer": 35,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 110438
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 105602
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 111610
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 47053
+        }
+      },
+      "elapsed_seconds": 21.6011036131531
+    },
+    {
+      "layer": 36,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 126196
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 1,
+          "max_expert_routed_tokens": 147978
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 11,
+          "max_expert_routed_tokens": 123245
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 92874
+        }
+      },
+      "elapsed_seconds": 21.662811301182956
+    },
+    {
+      "layer": 37,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 145906
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 132659
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 108744
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 54415
+        }
+      },
+      "elapsed_seconds": 21.08117139991373
+    },
+    {
+      "layer": 38,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 225888
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 193345
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 135624
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 48830
+        }
+      },
+      "elapsed_seconds": 21.09347266005352
+    },
+    {
+      "layer": 39,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 127276
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 145948
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 111816
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 50575
+        }
+      },
+      "elapsed_seconds": 20.34834297792986
+    },
+    {
+      "layer": 40,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 113290
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 166817
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 115475
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 119920
+        }
+      },
+      "elapsed_seconds": 19.839738123118877
+    },
+    {
+      "layer": 41,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 87400
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 107615
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 106902
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 95573
+        }
+      },
+      "elapsed_seconds": 19.905391670763493
+    },
+    {
+      "layer": 42,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 90455
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 164761
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 123214
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 66279
+        }
+      },
+      "elapsed_seconds": 19.71643245406449
+    },
+    {
+      "layer": 43,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 101488
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 97626
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 109624
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 68925
+        }
+      },
+      "elapsed_seconds": 19.4065740252845
+    },
+    {
+      "layer": 44,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 107909
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 122623
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 83771
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 76073
+        }
+      },
+      "elapsed_seconds": 19.478043674957007
+    },
+    {
+      "layer": 45,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 108627
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 152379
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 148437
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 95698
+        }
+      },
+      "elapsed_seconds": 19.501176221761853
+    },
+    {
+      "layer": 46,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 105077
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 86577
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 141692
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 53896
+        }
+      },
+      "elapsed_seconds": 20.3034764402546
+    },
+    {
+      "layer": 47,
+      "retained_channels": 61440,
+      "available_channels": 98304,
+      "retained_ratio": 0.625,
+      "prune_ratio": 0.375,
+      "min_retained_per_expert": 0,
+      "max_retained_per_expert": 768,
+      "mean_retained_per_expert": 480.0,
+      "domains": {
+        "wikitext": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 93469
+        },
+        "reasoning": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 77738
+        },
+        "hard_math": {
+          "routed_tokens": 2097152,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 116715
+        },
+        "code": {
+          "routed_tokens": 1048576,
+          "min_expert_routed_tokens": 0,
+          "max_expert_routed_tokens": 32799
+        }
+      },
+      "elapsed_seconds": 20.676080257166177
+    }
+  ],
+  "mask_checkpoint": "<local>/review_v1_fair_review_stage1_envelope_qwen3_exact50.pt",
+  "started_at": "2026-08-25T22:13:55.453715+00:00",
+  "elapsed_seconds": 1071.4418306420557,
+  "command": [
+    "scripts/prune_universal_moe.py",
+    "--profile",
+    "review_stage1_envelope",
+    "--pruning-rate",
+    "0.50",
+    "--model-source",
+    "<local>/Qwen3-30B-A3B-Instruct-2507",
+    "--model-name",
+    "local/Qwen3-30B-A3B-Instruct-2507",
+    "--model-revision",
+    "local-20260826-review-v1",
+    "--checkpoint",
+    "experiments/checkpoints/review_v1_fair_review_stage1_envelope_qwen3_exact50.pt",
+    "--output",
+    "experiments/results/review_v1_fair_review_stage1_envelope_qwen3_exact50_maskgen.json",
+    "--chunk-size",
+    "1",
+    "--competition-math-source",
+    "<local>/train-00000-of-00001-e16e6f951738846d.parquet",
+    "--competition-math-exclusion-manifest",
+    "experiments/results/competition_math_train_decontamination.json"
+  ],
+  "environment": {
+    "torch": "2.10.0+cu128",
+    "transformers": "5.13.0"
+  },
+  "local_reconstruction_record_count": 6144
+}

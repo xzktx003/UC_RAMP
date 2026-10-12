@@ -1,0 +1,59 @@
+{
+  "dataset_args": {
+    "humaneval": {
+      "aggregation": "mean_and_pass_at_k",
+      "dataset_id": "opencompass/humaneval",
+      "default_subset": "default",
+      "description": "HumanEval is a benchmark for evaluating the ability of code generation models to write Python functions based on given specifications. It consists of programming tasks with a defined input-output behavior. **By default the code is executed in local environment. We recommend using sandbox execution to safely run and evaluate the generated code, please refer to the [documentation](https://evalscope.readthedocs.io/en/latest/user_guides/sandbox.html) for more details.**",
+      "eval_split": "test",
+      "extra_params": {},
+      "few_shot_num": 0,
+      "few_shot_prompt_template": null,
+      "few_shot_random": false,
+      "filters": null,
+      "force_redownload": false,
+      "metric_list": [
+        "acc"
+      ],
+      "name": "humaneval",
+      "output_types": [
+        "generation"
+      ],
+      "pretty_name": "HumanEval",
+      "prompt_template": "Read the following function signature and docstring, and fully implement the function described. Your response should only contain the code for this function.\n{question}",
+      "query_template": null,
+      "review_timeout": 4,
+      "sandbox_config": {
+        "image": "python:3.11-slim",
+        "tools_config": {
+          "python_executor": {},
+          "shell_executor": {}
+        }
+      },
+      "shuffle": false,
+      "shuffle_choices": false,
+      "subset_list": [
+        "openai_humaneval"
+      ],
+      "system_prompt": null,
+      "tags": [
+        "Coding"
+      ],
+      "train_split": null
+    }
+  },
+  "datasets": [
+    "humaneval"
+  ],
+  "dataset_hub": "modelscope",
+  "generation_config": {
+    "batch_size": 8,
+    "max_tokens": 2048,
+    "temperature": 0.0
+  },
+  "eval_batch_size": 8,
+  "seed": 1234,
+  "chat_template": null,
+  "eval_type": "openai_api",
+  "limit": null
+}

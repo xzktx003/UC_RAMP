@@ -1,0 +1,4 @@
+-r requirements.txt
+vllm==0.27.1
+evalscope==1.4.1
+triton==3.7.1

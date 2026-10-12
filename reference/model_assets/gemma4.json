@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "scope": "current local assets; not a historical weight attestation",
+  "files": {
+    "config.json": {
+      "bytes": 3815,
+      "sha256": "ed0c1eb3633de771906e9ba004a44cc5635bcc06ee2062077c3d2e88a50707d3"
+    },
+    "generation_config.json": {
+      "bytes": 208,
+      "sha256": "d4226bbe3117d2d253ba4609720ba82c6c4ce4627a9a6ae05387c78983ac03de"
+    },
+    "tokenizer.json": {
+      "bytes": 32169626,
+      "sha256": "cc8d3a0ce36466ccc1278bf987df5f71db1719b9ca6b4118264f45cb627bfe0f"
+    },
+    "tokenizer_config.json": {
+      "bytes": 2068,
+      "sha256": "97af7f9a43d9c26b4ae9558b39c2d6ffed60b9869f2cf2b9a5282b05c6dac67c"
+    },
+    "chat_template.jinja": {
+      "bytes": 12045,
+      "sha256": "2dfbfc7d538912f4ea11d29d85b4e25d7bc26386e53f57529f1d707c28b5828c"
+    },
+    "processor_config.json": {
+      "bytes": 1689,
+      "sha256": "32bdf45d2ad4cc29a0822ddd157a182de76644f0419a6228d151495256e9813c"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 103196,
+      "sha256": "907826a6e46ff454272bd6db1fee629d5531a2303be22986d825a0871d7dc7a7"
+    }
+  },
+  "weight_shards": {
+    "model-00001-of-00002.safetensors": {
+      "bytes": 49907246508
+    },
+    "model-00002-of-00002.safetensors": {
+      "bytes": 1704763408
+    }
+  },
+  "weight_hashes_included": false
+}

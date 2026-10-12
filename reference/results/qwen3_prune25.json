@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "experiment_type": "review_v1_fair_ablation_evalscope_summary",
+  "model": "local/Qwen3-30B-A3B-Instruct-2507",
+  "method": "UC-RAMP",
+  "profile": "review_stage1_ramp",
+  "calibration_aggregation": "universal_capability_envelope",
+  "max_swaps": 1,
+  "granularity": "channel",
+  "prune_ratio": 0.25,
+  "retained_channels": 3538944,
+  "total_channels": 4718592,
+  "mask_checkpoint_sha256": "6858529f3eac366955fd0b7396130c0d7ad94f1015b6dfdfaa0d2e5e4cdff5cd",
+  "protocol": {
+    "evaluator": "EvalScope 1.4.1",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "seed": 1234,
+    "mmlu_used": false,
+    "offline": true,
+    "calibration_windows": 448,
+    "calibration_sequence_length": 2048,
+    "layer_budget_schedule": "tail_protected_normalized_exact75"
+  },
+  "metrics": {
+    "wikitext2_ppl_diagnostic": 7.3185290208782385,
+    "piqa": 0.9069640914036997,
+    "arc_easy": 0.944023569023569,
+    "arc_challenge": 0.9249146757679181,
+    "gsm8k": 0.9658832448824868,
+    "hellaswag": 0.8675562636924915,
+    "winogrande": 0.7379636937647988,
+    "race": 0.9089987839481152,
+    "gpqa_diamond": 0.3383838383838384,
+    "math500": 0.79,
+    "humaneval_pass_at_1": 0.8963414634146342,
+    "accuracy_macro_average": 0.8281029624281551,
+    "math500_high_repetition_rate": 0.002,
+    "math500_near_cap_rate": 0.212
+  },
+  "correct_counts": {
+    "piqa": 1667,
+    "arc_easy": 2243,
+    "arc_challenge": 1084,
+    "gsm8k": 1274,
+    "hellaswag": 8712,
+    "winogrande": 935,
+    "race": 4485,
+    "gpqa_diamond": 67,
+    "math500": 395,
+    "humaneval_pass_at_1": 147
+  },
+  "sample_counts": {
+    "piqa": 1838,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "gsm8k": 1319,
+    "hellaswag": 10042,
+    "winogrande": 1267,
+    "race": 4934,
+    "gpqa_diamond": 198,
+    "math500": 500,
+    "humaneval_pass_at_1": 164
+  },
+  "sources": {
+    "mask_generation": "reference/pruning/qwen3_prune25.json",
+    "ppl_result": "reference/ppl/qwen3_prune25.json"
+  }
+}

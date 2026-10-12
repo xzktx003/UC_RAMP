@@ -1,0 +1,7 @@
+# Separate historical environment used for the reported Qwen3 50% run.
+# Do not combine with requirements-eval.txt.
+torch==2.10.0
+transformers==5.13.0
+datasets==3.6.0
+vllm==0.19.1
+evalscope==1.4.1

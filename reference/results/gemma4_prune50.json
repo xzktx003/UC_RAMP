@@ -1,0 +1,70 @@
+{
+  "schema_version": 1,
+  "status": "complete",
+  "experiment_type": "review_v1_fair_ablation_evalscope_summary",
+  "model": "local/gemma-4-26B-A4B-it",
+  "method": "UC-RAMP",
+  "profile": "review_stage1_ramp",
+  "calibration_aggregation": "universal_capability_envelope",
+  "max_swaps": 1,
+  "granularity": "channel",
+  "prune_ratio": 0.5,
+  "retained_channels": 1351680,
+  "total_channels": 2703360,
+  "mask_checkpoint_sha256": "8dfc43e8e9cd05289f06952069a8cdf86c99264d19c22b1d11449cc22d415253",
+  "protocol": {
+    "evaluator": "EvalScope 1.4.1",
+    "temperature": 0,
+    "max_tokens": 2048,
+    "seed": 1234,
+    "mmlu_used": false,
+    "offline": true,
+    "calibration_windows": 448,
+    "calibration_sequence_length": 2048,
+    "layer_budget_schedule": "tail_protected_normalized_exact50"
+  },
+  "metrics": {
+    "wikitext2_ppl_diagnostic": 208.74363110111562,
+    "piqa": 0.7268770402611534,
+    "arc_easy": 0.9053030303030303,
+    "arc_challenge": 0.8720136518771331,
+    "gsm8k": 0.954510993176649,
+    "hellaswag": 0.6350328619796853,
+    "winogrande": 0.665351223362273,
+    "race": 0.8680583704904743,
+    "gpqa_diamond": 0.2828282828282828,
+    "math500": 0.738,
+    "humaneval_pass_at_1": 0.1402439024390244,
+    "accuracy_macro_average": 0.6788219356717706,
+    "math500_high_repetition_rate": 0.23,
+    "math500_near_cap_rate": 0.242
+  },
+  "correct_counts": {
+    "piqa": 1336,
+    "arc_easy": 2151,
+    "arc_challenge": 1022,
+    "gsm8k": 1259,
+    "hellaswag": 6377,
+    "winogrande": 843,
+    "race": 4283,
+    "gpqa_diamond": 56,
+    "math500": 369,
+    "humaneval_pass_at_1": 23
+  },
+  "sample_counts": {
+    "piqa": 1838,
+    "arc_easy": 2376,
+    "arc_challenge": 1172,
+    "gsm8k": 1319,
+    "hellaswag": 10042,
+    "winogrande": 1267,
+    "race": 4934,
+    "gpqa_diamond": 198,
+    "math500": 500,
+    "humaneval_pass_at_1": 164
+  },
+  "sources": {
+    "mask_generation": "reference/pruning/gemma4_prune50.json",
+    "ppl_result": "reference/ppl/gemma4_prune50.json"
+  }
+}
